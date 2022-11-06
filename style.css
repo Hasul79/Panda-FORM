@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script|Roboto);
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+body{
+    background: #cc3367;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.panda {
+    position: relative;
+    width: 200px;
+    margin: 50px auto;
+}
+.face {
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 50px auto;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0, 0.15);
+    z-index: 50;
+    position: relative;
+}
+.ear, .ear::after {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #000;
+    z-index: 5;
+    border: 15px solid #fff;
+    left: -15px;
+    top: -15px;
+    border-radius: 100px;
+}
+.ear::after{
+    content: '';
+    left: 125px;
+}
+.eye-shade {
+    background: #000;
+    width: 50px;
+    height: 80px;
+    margin: 10px;
+    position: absolute;
+    top: 35px;
+    left: 25px;
+    transform: rotate(220deg);
+    border-radius: 25px/20px 30px 50px;
+}
+.eye-shade.rgt{
+  transform: rotate(140deg);
+  left: 105px;
+}
+.eye-white {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    left: 40px;
+    top: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 500;
+}
+.eye-white.rgt {
+    left: auto;
+    right: 40px;
+}
+.eye-ball {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    left: 20px;
+    top: 20px;
+    max-width: 10px;
+    min-height: 10px;
+    transition: 0.1s;
+}
+.eye-ball::after {
+    content: '';
+    background: #000;
+    width: 20px;
+    height: 20px;
+    right:0;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 50%;
+}
+.nose {
+    position: absolute;
+    width: 35px;
+    height: 20px;
+    bottom: 40px;
+    background: #000;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 50px 20px/30px 15px;
+    transform: rotate(15deg);
+}
+.body {
+    background: #fff;
+    width: 250px;
+    height: 282px;
+    position: absolute;
+    top: 200px;
+    left: -20px;
+    border-radius: 100px 100px 100px 100px/126px 126px 96px 96px ;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
