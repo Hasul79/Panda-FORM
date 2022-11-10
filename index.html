@@ -41,7 +41,7 @@
         <div class="hand"></div>
         <div class="hand rgt"></div>
         <!-- end hand design -->
-        <h1>Panda design</h1>
+        <h1>Panda Login</h1>
 
         <div class="form-group">
             <input required="required" class="form-control">
@@ -51,11 +51,38 @@
         <div class="form-group">
             <input type="password" required="required" id="password" class="form-control">
             <label class="form-label">Password</label>
-            <p class="alert">Invalid credentials...</p>
+            
             <button class="btn">Login</button>
         </div>
 
     </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery"></script>
-</body>
+    <script>
+       $('#password').focusin(function(){
+        $('form').addClass('up')
+       });
+       $('#password').focusout(function(){
+        $('form').removeClass('up')
+       });
+
+       $(document).on('mousemove', function(event){
+        let dw = $(document).width() / 15;
+        let dh = $(document).height() / 15;
+        let x = event.pageX/ dw;
+        let y = event.pageY/ dh;
+        $('.eye-ball').css({
+          width : x,
+          height : y
+        });
+
+        // $('.btn').click(function(){
+        //   $('form').addClass('wrong-entry');
+        //   setTimeout(function(){
+        //     $('form').removeClass('wrong-entry');
+        //   }, 3000);
+        // });
+
+       });
+    </script>
+  </body>
 </html>
