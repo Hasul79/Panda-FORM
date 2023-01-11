@@ -125,27 +125,27 @@ body{
     top: 70px;
     left: -25px;
 }
-.hand::after,
+.hand:after,
 .hand:before {
     content: '';
     left:-5px;
     top:11px;
 }
-.hand::before {
+.hand:before {
     top: 26px;
 }
 
 .hand.rgt,
-.rgt.hand::after,
-.rgt.hand::before {
+.rgt.hand:after,
+.rgt.hand:before {
     left: auto;
-    right: 25px;
+    right: -25px;
 }
 
-.hand.rgt::after,
-.hand.rgt::before {
+.hand.rgt:after,
+.hand.rgt:before {
     left:auto;
-    right: -25px;
+    right: -5px;
 }
 
 .foot{
@@ -222,8 +222,8 @@ form{
     z-index: 500;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
     transition: 0.3s;
-    -webkit-transform: translateY(-100px);
-    transform: translateY(-100px);
+    /* -webkit-transform: translateY(-100px); */
+    transform: translateY(-100deg);
     border: 1px solid #eee;
     position: relative;
 }
@@ -295,9 +295,9 @@ h1{
 .form-group .form-control:valid + .form-label {
     font-size: 12px;
     color: #ff4081;
-    transform:translateY(-15px) ;
+    transform: translateY(-15px);
 }
-/* .alert{
+ .alert{
     position: absolute;
     color: #f00;
     font-size: 16px;
@@ -313,7 +313,7 @@ h1{
     transition: linear 0.4s 0.6s;
     transition-delay: 0.6s;
 }
-.alert::after {
+.alert:after {
     content: "";
     position: absolute;
     width: 25px;
@@ -324,12 +324,12 @@ h1{
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     border-radius: 50%;
 }
-.alert::before{
+.alert:before{
     width: 15px;
     height: 15px;
     left: -35px;
     bottom: -25px;
-} */
+}  
 @keyframes eye-blink{
     to {
         height: 30px;
